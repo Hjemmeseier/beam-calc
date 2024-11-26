@@ -16,5 +16,12 @@ if st.button("Calculate"):
     st.subheader("Reactions")
     st.write(f"Reaction at Support A: {reaction:.2f} kN")
     st.write(f"Reaction at Support B: {reaction:.2f} kN")
+
+# Shear Force Diagram
+    x = np.linspace(0, length, 1000)
+    shear_force = reaction - uniform_load * x
+
+    # Moment Diagram
+    bending_moment = reaction * x - (uniform_load * x**2) / 2
     
 

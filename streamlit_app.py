@@ -34,15 +34,3 @@ if st.button("Calculate"):
     ax1.legend()
     ax1.grid()
     st.pyplot(fig1)
-
-    # Plot Moment Diagram
-    st.subheader("Bending Moment Diagram")
-    fig2, ax2 = plt.subplots()
-    ax2.plot(x, bending_moment, label="Bending Moment (kNm)", color="green")
-    ax2.axhline(0, color="black", linewidth=0.8)
-    ax2.set_xlabel("Position along Beam (m)")
-    ax2.set_ylabel("Bending Moment (kNm)")
-    ax2.set_title("Bending Moment Diagram")
-    ax2.legend()
-    ax2.grid()
-    st.pyplot(fig2)
